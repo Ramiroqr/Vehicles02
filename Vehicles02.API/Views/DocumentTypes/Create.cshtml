@@ -1,28 +1,29 @@
-﻿@model Vehicles02.API.Data.Entities.VehicleType
+﻿@model Vehicles02.API.Data.Entities.DocumentType
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Create";
 }
 
-<h1>Editar</h1>
+<h1>Crear</h1>
 
-<h4>Tipo de vehiculo</h4>
+<h4>Tipo de documento</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
 
-            <partial name="_VehicleTypes" />
+            <partial name="_DocumentType" />
 
             <div class="form-group">
-                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <input type="submit" value="Crear" class="btn btn-primary" />
                 <a asp-action="Index" class="btn btn-success">Retornar</a>
             </div>
         </form>
     </div>
 </div>
+
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
